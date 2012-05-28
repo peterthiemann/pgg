@@ -1,0 +1,540 @@
+scheme48 -h 4000000
+Welcome to Scheme 48 0.44 (made by sperber on Mon Jul 29 12:04:51 MST 1996).
+Copyright (c) 1993, 1994 by Richard Kelsey and Jonathan Rees.
+Copyright (c) 1996 by NEC Research Institute, Inc.
+Please report bugs to scheme-48-bugs@martigny.ai.mit.edu.
+Type ,? (comma question-mark) for help.
+> Will compile some calls in line
+> > config> config.scm config> > ../../../../soft/scheme48-0.44/scheme/opt/expand.scm ../../../../soft/scheme48-0.44/scheme/opt/sort.scm ../../../../soft/scheme48-0.44/scheme/opt/flatten.scm > > cogen-load-intro.scm 
+loading program generator generator
+cogen-record.scm auxiliary.scm pp.scm cogen-env.scm cogen-abssyn.scm cogen-scheme.scm cogen-oca.scm cogen-skeleton.scm cogen-eq-flow.scm cogen-ctors.scm cogen-library.scm cogen-residual.scm shift-reset.scm cogen-intro.scm cogen-driver.scm > > > > > > > > > > > ----------------------------------------------------------------------> 
+> PGG (app) :> 
+> > Before: 1191011 words free in semispace
+After:  1500585 words free in semispace
+> Run time: 5.84 seconds; Elapsed time: 5.90 seconds
+'#{Unspecific}
+> (^^^ preprocessing time * 100)> 
+> > !!!compiling> 
+> > > Before: 847381 words free in semispace
+After:  1498445 words free in semispace
+> Run time: 0.36 seconds; Elapsed time: 0.35 seconds
+'#{Unspecific}
+> (^^^ specialization time * 100)> 
+> > > > > > Before: 1259951 words free in semispace
+After:  1498787 words free in semispace
+> > > ----------------------------------------------------------------------> 
+> PGG (ctors) :> 
+> > Before: 1485977 words free in semispace
+After:  1498688 words free in semispace
+> Run time: 14.08 seconds; Elapsed time: 14.10 seconds
+'#{Unspecific}
+> (^^^ preprocessing time * 100)> 
+> > !!!compiling> 
+> > > Before: 1118005 words free in semispace
+After:  1489191 words free in semispace
+> Run time: 1.63 seconds; Elapsed time: 1.63 seconds
+'#{Unspecific}
+> (^^^ specialization time * 100)> 
+> > > > > > Before: 524218 words free in semispace
+After:  1489850 words free in semispace
+> > > ----------------------------------------------------------------------> 
+> PGG (lambda) :> 
+> > Before: 1477096 words free in semispace
+After:  1489751 words free in semispace
+> Run time: 11.50 seconds; Elapsed time: 11.63 seconds
+'#{Unspecific}
+> (^^^ preprocessing * 100)> 
+> > !!!compiling> 
+> > > Before: 398989 words free in semispace
+After:  1485788 words free in semispace
+> Run time: 0.96 seconds; Elapsed time: 0.96 seconds
+'#{Unspecific}
+> (^^^ specialization time * 100)> 
+> > > > > > Before: 790232 words free in semispace
+After:  1486563 words free in semispace
+> > > ----------------------------------------------------------------------> 
+> PGG (direct-lr) :> 
+> > > Before: 1471364 words free in semispace
+After:  1486464 words free in semispace
+> wft-apply-property
+Run time: 2.56 seconds; Elapsed time: 2.60 seconds
+'#{Unspecific}
+> (^^^ preprocessing * 1)> 
+> > > examples/direct-lr-support.scm > ../lr-essence/examples/grammars.scm > !!!compiling> 
+> wft-apply-property
+> > Before: 408649 words free in semispace
+After:  1394269 words free in semispace
+> Run time: 8.66 seconds; Elapsed time: 8.65 seconds
+'#{Unspecific}
+> (^^^ specialization time * 1)> 
+> > > > > > Before: 757912 words free in semispace
+After:  1399831 words free in semispace
+> > > ----------------------------------------------------------------------> 
+> PGG (cps-lr) :> 
+> > Before: 1387119 words free in semispace
+After:  1399732 words free in semispace
+> Run time: 1.07 seconds; Elapsed time: 1.06 seconds
+#t
+> (^^^ preprocessing time * 1)> 
+> > > examples/direct-lr-support.scm > ../lr-essence/examples/grammars.scm > > Before: 715244 words free in semispace
+After:  1380974 words free in semispace
+> Run time: 7.40 seconds; Elapsed time: 7.40 seconds
+#t
+> (^^^ specialization time * 1)> 
+> > > > > > > > ----------------------------------------------------------------------> 
+> PGG (cps-lr, 3 levels) :> 
+> > Before: 234419 words free in semispace
+After:  1383694 words free in semispace
+> Run time: 1.10 seconds; Elapsed time: 1.10 seconds
+#t
+> (^^^ preprocessing time * 1)> 
+> > > > Before: 1123643 words free in semispace
+After:  1362934 words free in semispace
+> Run time: 0.11 seconds; Elapsed time: 0.11 seconds
+#t
+> (^^^ generation time * 1)> 
+> > > > examples/direct-lr-support.scm > ../lr-essence/examples/grammars.scm > Before: 23049 words free in semispace
+After:  1340225 words free in semispace
+> 
+Error: exception
+       (car '())
+1> (^^^ specialization time 1 * 1)1> 
+1> 1> 1> 1> 1> 1> 1> ----------------------------------------------------------------------1> 
+1> PGG (scheme1) :1> 
+1> 1> Before: 1308584 words free in semispace
+After:  1349870 words free in semispace
+1> Run time: 10.61 seconds; Elapsed time: 10.61 seconds
+#t
+1> (^^^ preprocessing time * 1)1> 
+1> 1> 1> 1> examples/scheme1-support.scm 1> ../../int/examples.scm 1> Before: 362687 words free in semispace
+After:  1129025 words free in semispace
+1> 
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+dynamic conditional: (if (22 null? (23 . x)) (24 apply (25 . c) (26 . z)) (27 call a (28 cdr (29 . x)) (30 . z) (31 lambda ((32 . xz)) (33 apply (34 . c) (35 cons (36 car (37 . x)) (38 . xz))))))
+
+Interrupt: keyboard
+2> (^^^ specialization time * 1)2> 
+2> 2> 2> 

@@ -1,0 +1,100 @@
+#!/bin/sh
+# -*- scheme -*-
+# tested 11/12/1998
+# experiments with imperative specialization
+# to use: ./RUN_ME
+######################################################################
+# 1. unification
+######################################################################
+# results in /tmp/unify-*.scm where
+# generating extension:
+#	unify-0.scm
+# residual programs:				unification spec wrt
+#	unify-cst-555.scm			(cst 555)
+#	unify-var-555.scm			(var 555)
+#	unify-bin-var-1-var-1.scm		(bin (var 1) (var 1))
+#	unify-bin-var-1-bin-cst-4711-var-1.scm	(bin (var 1) (bin (cst 4711) (var 1)))
+######################################################################
+# 2. lazy two-level interpreter
+#	specializer generation using the specializer projections
+######################################################################
+# results in /tmp/unify-*.scm where
+# generating extension:
+#	2lazy-0.scm
+# residual programs:				prog	spec wrt
+#	2lazy1-42.scm				lazy1	42
+#	2lazy1-CV1.scm				lazy1	unknown
+#	2lazy2-CV1-CV2-CV3.scm			lazy2	unknown unknown unknown
+#	2lazy2-CV1-CV2-13.scm			lazy2	unknown unknown 13
+#	2lazy2-CV1-7-11.scm			lazy2	unknown 7 11
+#	2lazy2-true-CV2-CV3.scm			lazy2	#t unknown unknown
+#	2lazy2-false-CV2-CV3.scm		lazy2	#f unknown unknown
+#	2lazy2-false-CV2-17.scm			lazy2	#f unknown 17
+make all
+scheme48 -h 4000000 -i pgg.image << \EOF-STRING
+,open cogen-boxops
+(display "************************************") (newline)
+(display "specialize unification with pointers") (newline)
+
+(writelpp (cogen-driver (list "examples/unify.scm") '(main 0 1))
+	  "/tmp/unify-0.scm")
+
+(load "cogen-ctors.scm")
+(load "/tmp/unify-0.scm")
+
+(specialize '($goal 0 1) (list  '(cst 555) 'YYY))
+(writelpp *residual-program* "/tmp/unify-cst-555.scm")
+
+(specialize '($goal 0 1) (list  '(var 555) 'YYY))
+(writelpp *residual-program* "/tmp/unify-var-555.scm")
+
+(specialize '($goal 0 1) (list  '(bin (var 1) (var 1)) 'YYY))
+(writelpp *residual-program* "/tmp/unify-bin-var-1-var-1.scm")
+
+(specialize '($goal 0 1) (list  '(bin (var 1) (bin (cst 4711) (var 1))) 'YYY))
+(writelpp *residual-program* "/tmp/unify-bin-var-1-bin-cst-4711-var-1.scm")
+
+(display "******************************************************************") (newline)
+(display "specialize a two-level interpreter for a lazy first-order language") (newline)
+
+(writelpp (cogen-driver (list "examples/2lazy.scm")
+			'(lazy-2int 0 0 0 1))
+	  "/tmp/2lazy-0.scm")
+
+(load "examples/2lazy-support.scm")
+(load "/tmp/2lazy-0.scm")
+
+(display "************************") (newline)
+(display "specializing the program") (newline)
+(p lazy1)
+
+(specialize '($goal 0 0 0 1) (list lazy1 'f '(42) 'DYN))
+(writelpp *residual-program* "/tmp/2lazy1-42.scm")
+
+(specialize '($goal 0 0 0 1) (list lazy1 'f '((CV 1)) 'DYN))
+(writelpp *residual-program* "/tmp/2lazy1-CV1.scm")
+
+(display "************************") (newline)
+(display "specializing the program") (newline)
+(p lazy2)
+
+(specialize '($goal 0 0 0 1) (list lazy2 'f '((CV 1) (CV 2) (CV 3)) 'DYN))
+(writelpp *residual-program* "/tmp/2lazy2-CV1-CV2-CV3.scm")
+
+(specialize '($goal 0 0 0 1) (list lazy2 'f '((CV 1) (CV 2) 13) 'DYN))
+(writelpp *residual-program* "/tmp/2lazy2-CV1-CV2-13.scm")
+
+(specialize '($goal 0 0 0 1) (list lazy2 'f '((CV 1) 7 11) 'DYN))
+(writelpp *residual-program* "/tmp/2lazy2-CV1-7-11.scm")
+
+(specialize '($goal 0 0 0 1) (list lazy2 'f '(#t (CV 1) (CV 2)) 'DYN))
+(writelpp *residual-program* "/tmp/2lazy2-true-CV2-CV3.scm")
+
+(specialize '($goal 0 0 0 1) (list lazy2 'f '(#f (CV 1) (CV 2)) 'DYN))
+(writelpp *residual-program* "/tmp/2lazy2-false-CV2-CV3.scm")
+
+(specialize '($goal 0 0 0 1) (list lazy2 'f '(#f (CV 1) 17) 'DYN))
+(writelpp *residual-program* "/tmp/2lazy2-false-CV2-17.scm")
+
+,exit
+\EOF-STRING

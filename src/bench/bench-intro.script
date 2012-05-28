@@ -1,0 +1,9 @@
+,bench on
+,open closures escapes signals
+,config
+,load config.scm
+,user
+,load-package flattener
+,open scan
+,load cogen-load-intro.scm
+(define direct-lr-input-files '("examples/direct-lr-pgg.scm"))

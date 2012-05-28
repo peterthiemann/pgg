@@ -1,0 +1,13 @@
+(loadt "examples/object.adt")
+(define (main dummy)
+  (let ((counter-class
+	 (lambda ()
+	   (let* ((slot (make-cell 0))
+		  (mset (lambda (x) (cell-set! slot x) x))
+		  (mget (lambda () (cell-ref slot)))
+		  (madd (lambda (x) (cell-set! slot (+ (cell-ref slot) x)) x)))
+	     (object mset mget madd )))))
+    (let ((cnt (counter-class)))
+      ((set cnt) 21)
+      ((add cnt) ((get cnt)))
+      ((get cnt)))))

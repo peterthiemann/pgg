@@ -1,0 +1,172 @@
+scheme48 -h 4000000
+Welcome to Scheme 48 0.36 (made by peter on Wed May 24 21:06:56 MET DST 1995).
+Copyright (c) 1993, 1994 by Richard Kelsey and Jonathan Rees.
+Please report bugs to scheme-48-bugs@martigny.ai.mit.edu.
+Type ,? (comma question-mark) for help.
+> Will compile some calls in line
+> > cogen-load.scm 
+loading program-generator generator
+cogen-record.scm 
+pp.scm ......
+.auxiliary.scm .........................................
+cogen-env.scm ...........................
+cogen-abssyn.scm ..........................................................................................................................
+cogen-scheme.scm ............................................................................
+Undefined: (wft-property-table wft-make-memo-property bta-make-memo-postprocessor)
+cogen-oca.scm ........
+cogen-skeleton.scm ....
+Undefined: (make-ge-var make-ge-const make-ge-cond make-ge-op make-ge-call make-ge-begin make-ge-let ann->bt full-ecr node-fetch-type type->memo make-ge-lambda make-ge-lambda-memo make-ge-vlambda-memo make-ge-app make-ge-app-memo make-ge-ctor make-ge-ctor-memo make-ge-sel make-ge-sel-memo make-ge-test make-ge-test-memo make-ge-lift make-ge-eval)
+cogen-eq-flow.scm .......................................................................................................................
+cogen-ctors.scm ..
+cogen-library.scm .........
+cogen-residual.scm ......
+shift-reset.scm .....
+cogen-direct-syntax.scm ............................
+cogen-driver.scm .
+
+> > > > > > > > > > > ----------------------------------------------------------------------> 
+> PGG (app) :> 
+> > Before: 1111836 words free in semispace
+After:  1539685 words free in semispace
+> Run time: 0.58 seconds
+'#{Unspecific}
+> (^^^ preprocessing time * 100)> 
+> > !!!compiling> 
+> > > Before: 1400694 words free in semispace
+After:  1538798 words free in semispace
+> Run time: 1.36 seconds
+'#{Unspecific}
+> (^^^ specialization time * 100)> 
+> > > 
+Warning: can't undefine - binding is inherited
+         #{Package 113 user}
+         $goal-1
+> > > Before: 1394166 words free in semispace
+After:  1538975 words free in semispace
+> > > ----------------------------------------------------------------------> 
+> PGG (ctors) :> 
+> > Before: 1529149 words free in semispace
+After:  1538975 words free in semispace
+> Run time: 1.42 seconds
+'#{Unspecific}
+> (^^^ preprocessing time * 100)> 
+> > !!!compiling> 
+> > > Before: 1254065 words free in semispace
+After:  1536486 words free in semispace
+> Run time: 4.32 seconds
+'#{Unspecific}
+> (^^^ specialization time * 100)> 
+> > > 
+Warning: can't undefine - binding is inherited
+         #{Package 113 user}
+         $goal-1
+> > > Before: 1085288 words free in semispace
+After:  1432555 words free in semispace
+> > > ----------------------------------------------------------------------> 
+> PGG (lambda) :> 
+> > Before: 1422726 words free in semispace
+After:  1432555 words free in semispace
+> Run time: 1.12 seconds
+'#{Unspecific}
+> (^^^ preprocessing * 100)> 
+> > !!!compiling> 
+> > > Before: 1179321 words free in semispace
+After:  1430710 words free in semispace
+> Run time: 3.80 seconds
+'#{Unspecific}
+> (^^^ specialization time * 100)> 
+> > > 
+Warning: can't undefine - binding is inherited
+         #{Package 113 user}
+         $goal-1
+> > > Before: 1035728 words free in semispace
+After:  1430998 words free in semispace
+> > > ----------------------------------------------------------------------> 
+> PGG (direct-lr) :> 
+> > > Before: 1419109 words free in semispace
+After:  1430998 words free in semispace
+> wft-apply-property
+Run time: 26.39 seconds
+'#{Unspecific}
+> (^^^ preprocessing * 1)> 
+> > > examples/direct-lr-support.scm ............................................................................
+> ../lr-essence/examples/grammars.scm ....................
+> !!!compiling> 
+> wft-apply-property
+> > Before: 1018992 words free in semispace
+After:  1389331 words free in semispace
+> Run time: 29.39 seconds
+'#{Unspecific}
+> (^^^ specialization time * 1)> 
+> > > 
+Warning: can't undefine - binding is inherited
+         #{Package 113 user}
+         $goal-1
+> > > Before: 435344 words free in semispace
+After:  1359537 words free in semispace
+> > > ----------------------------------------------------------------------> 
+> PGG (cps-lr) :> 
+> > Before: 1349711 words free in semispace
+After:  1359537 words free in semispace
+> Run time: 10.32 seconds
+#t
+> (^^^ preprocessing time * 1)> 
+> > > examples/direct-lr-support.scm ............................................................................
+> ../lr-essence/examples/grammars.scm ....................
+> > Before: 336357 words free in semispace
+After:  1355447 words free in semispace
+> Run time: 21.86 seconds
+#t
+> (^^^ specialization time * 1)> 
+> > > 
+Warning: can't undefine - binding is inherited
+         #{Package 113 user}
+         $goal-1
+> > > > > ----------------------------------------------------------------------> 
+> PGG (cps-lr, 3 levels) :> 
+> > Before: 1064157 words free in semispace
+After:  1354165 words free in semispace
+> Run time: 10.37 seconds
+#t
+> (^^^ preprocessing time * 1)> 
+> > > > Before: 697784 words free in semispace
+After:  1345551 words free in semispace
+> 
+Error: wrong number of arguments
+       (make-ge-lambda 1 '(nonterminal-6 input-7) '(_let 1 #t 1 ((nonterminal-8 nonterminal-6)) (_let 1 #t 1 (#) (_let 1 #f 1 # #))))
+1> (^^^ generation time * 1)1> 
+1> 
+Error: wrong number of arguments
+       (make-ge-lambda 1 '(nonterminal-6 input-7) '(_let 1 #t 1 ((nonterminal-8 nonterminal-6)) (_let 1 #t 1 (#) (_let 1 #f 1 # #))))
+2> 2> 2> examples/direct-lr-support.scm ............................................................................
+2> ../lr-essence/examples/grammars.scm ....................
+2> Before: 570420 words free in semispace
+After:  1333847 words free in semispace
+2> 
+Error: undefined variable
+       level1
+       (package user)
+3> (^^^ specialization time 1 * 1)3> 
+3> 3> 3> 
+Warning: can't undefine - binding is inherited
+         #{Package 113 user}
+         $goal-1
+3> 3> 3> 3> ----------------------------------------------------------------------3> 
+3> PGG (scheme1) :3> 
+3> 3> Before: 1308985 words free in semispace
+After:  1335774 words free in semispace
+3> Run time: 97.69 seconds
+#t
+3> (^^^ preprocessing time * 1)3> 
+3> 3> 3> 3> examples/scheme1-support.scm .......................................................................
+3> 
+Error: can't open for input
+       "../../int/examples.scm"
+4> Before: 597348 words free in semispace
+After:  1220578 words free in semispace
+4> 
+Error: undefined variable
+       ex5
+       (package user)
+5> (^^^ specialization time * 1)5> 
+5> 5> 5> 

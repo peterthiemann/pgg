@@ -1,0 +1,405 @@
+Welcome to Scheme 48 0.50 (made by pjt on Mon Apr  6 18:49:37 BST 1998).
+Copyright (c) 1993, 1994 by Richard Kelsey and Jonathan Rees.
+Copyright (c) 1996 by NEC Research Institute, Inc.
+Please report bugs to scheme-48-bugs@martigny.ai.mit.edu.
+Type ,? (comma question-mark) for help.
+> cogen-interfaces.scm > pp.scm auxiliary.scm cogen-globals.scm cogen-record.scm cogen-env.scm cogen-macro.scm cogen-abssyn.scm cogen-scheme.scm cogen-labset-bylist.scm cogen-eq-flow.scm cogen-effect.scm cogen-typesig.scm cogen-oca.scm cogen-boxops.scm cogen-library.scm shift-reset.scm cogen-residual.scm cogen-completer.scm cogen-memo-standard.scm cogen-direct-anf.scm cogen-skeleton.scm cogen-terminate.scm cogen-driver.scm > > > **********  boyer  **********> 
+> Before: 6698635 words free in semispace
+After:  7304627 words free in semispace
+> bta-run
+effect analysis: fixpointing done
+bta-solve
+bta-solve done
+Run time: 3.89 seconds; Elapsed time: 4.37 seconds
+#t
+> Before: 6001117 words free in semispace
+After:  7268148 words free in semispace
+> bta-run
+effect analysis: fixpointing done
+bta-solve
+bta-solve done
+Run time: 3.96 seconds; Elapsed time: 4.16 seconds
+#t
+> Before: 5965631 words free in semispace
+After:  7266701 words free in semispace
+> bta-run
+effect analysis: fixpointing done
+bta-solve
+bta-solve done
+Run time: 3.92 seconds; Elapsed time: 4.15 seconds
+#t
+> Before: 5964184 words free in semispace
+After:  7265254 words free in semispace
+> bta-run
+effect analysis: fixpointing done
+bta-solve
+bta-solve done
+Run time: 3.92 seconds; Elapsed time: 3.99 seconds
+#t
+> Before: 5962680 words free in semispace
+After:  7263804 words free in semispace
+> bta-run
+effect analysis: fixpointing done
+bta-solve
+bta-solve done
+Run time: 3.90 seconds; Elapsed time: 4.13 seconds
+#t
+> **********  dynamic  **********> 
+> Before: 5957642 words free in semispace
+After:  7262354 words free in semispace
+> bta-run
+unknown var: cdr considered TOP
+unknown var: car considered TOP
+unknown var: car considered TOP
+unknown var: cdr considered TOP
+unknown var: car considered TOP
+unknown var: cadr considered TOP
+unknown var: car considered TOP
+unknown var: cadr considered TOP
+bta-solve
+bta-solve done
+Run time: 31.05 seconds; Elapsed time: 33.74 seconds
+#t
+> Before: 5637402 words free in semispace
+After:  7111153 words free in semispace
+> bta-run
+unknown var: cdr considered TOP
+unknown var: car considered TOP
+unknown var: car considered TOP
+unknown var: cdr considered TOP
+unknown var: car considered TOP
+unknown var: cadr considered TOP
+unknown var: car considered TOP
+unknown var: cadr considered TOP
+bta-solve
+bta-solve done
+Run time: 30.70 seconds; Elapsed time: 32.31 seconds
+#t
+> Before: 5355810 words free in semispace
+After:  7015514 words free in semispace
+> bta-run
+unknown var: cdr considered TOP
+unknown var: car considered TOP
+unknown var: car considered TOP
+unknown var: cdr considered TOP
+unknown var: car considered TOP
+unknown var: cadr considered TOP
+unknown var: car considered TOP
+unknown var: cadr considered TOP
+bta-solve
+bta-solve done
+Run time: 30.75 seconds; Elapsed time: 32.10 seconds
+#t
+> Before: 5168736 words free in semispace
+After:  6919873 words free in semispace
+> bta-run
+unknown var: cdr considered TOP
+unknown var: car considered TOP
+unknown var: car considered TOP
+unknown var: cdr considered TOP
+unknown var: car considered TOP
+unknown var: cadr considered TOP
+unknown var: car considered TOP
+unknown var: cadr considered TOP
+bta-solve
+bta-solve done
+Run time: 30.72 seconds; Elapsed time: 31.95 seconds
+#t
+> Before: 4982471 words free in semispace
+After:  6824152 words free in semispace
+> bta-run
+unknown var: cdr considered TOP
+unknown var: car considered TOP
+unknown var: car considered TOP
+unknown var: cdr considered TOP
+unknown var: car considered TOP
+unknown var: cadr considered TOP
+unknown var: car considered TOP
+unknown var: cadr considered TOP
+bta-solve
+bta-solve done
+Run time: 30.72 seconds; Elapsed time: 45.91 seconds
+#t
+> **********  graphs  **********> 
+> Before: 4792923 words free in semispace
+After:  6728431 words free in semispace
+> bta-run
+bta-solve
+bta-solve done
+Run time: 5.41 seconds; Elapsed time: 11.08 seconds
+#t
+> Before: 4731573 words free in semispace
+After:  6768944 words free in semispace
+> bta-run
+bta-solve
+bta-solve done
+Run time: 5.43 seconds; Elapsed time: 10.97 seconds
+#t
+> Before: 4773133 words free in semispace
+After:  6768203 words free in semispace
+> bta-run
+bta-solve
+bta-solve done
+Run time: 5.39 seconds; Elapsed time: 11.01 seconds
+#t
+> Before: 4772395 words free in semispace
+After:  6767462 words free in semispace
+> bta-run
+bta-solve
+bta-solve done
+Run time: 5.39 seconds; Elapsed time: 11.00 seconds
+#t
+> Before: 4771664 words free in semispace
+After:  6766721 words free in semispace
+> bta-run
+bta-solve
+bta-solve done
+Run time: 5.39 seconds; Elapsed time: 10.98 seconds
+#t
+> **********  lattice  **********> 
+> Before: 4767358 words free in semispace
+After:  6765980 words free in semispace
+> bta-run
+effect analysis: fixpointing done
+bta-solve
+bta-solve done
+Run time: 2.05 seconds; Elapsed time: 4.19 seconds
+#t
+> Before: 5965262 words free in semispace
+After:  6773706 words free in semispace
+> bta-run
+effect analysis: fixpointing done
+bta-solve
+bta-solve done
+Run time: 2.06 seconds; Elapsed time: 4.26 seconds
+#t
+> Before: 5973458 words free in semispace
+After:  6772478 words free in semispace
+> bta-run
+effect analysis: fixpointing done
+bta-solve
+bta-solve done
+Run time: 2.04 seconds; Elapsed time: 4.09 seconds
+#t
+> Before: 5972233 words free in semispace
+After:  6771250 words free in semispace
+> bta-run
+effect analysis: fixpointing done
+bta-solve
+bta-solve done
+Run time: 2.04 seconds; Elapsed time: 4.17 seconds
+#t
+> Before: 5971002 words free in semispace
+After:  6770022 words free in semispace
+> bta-run
+effect analysis: fixpointing done
+bta-solve
+bta-solve done
+Run time: 2.03 seconds; Elapsed time: 3.97 seconds
+#t
+> **********  matrix  **********> 
+> Before: 5966225 words free in semispace
+After:  6768794 words free in semispace
+> bta-run
+effect analysis: fixpointing done
+bta-solve
+bta-solve done
+Run time: 7.66 seconds; Elapsed time: 15.33 seconds
+#t
+> Before: 3930256 words free in semispace
+After:  6704504 words free in semispace
+> bta-run
+effect analysis: fixpointing done
+bta-solve
+bta-solve done
+Run time: 7.64 seconds; Elapsed time: 15.32 seconds
+#t
+> Before: 3867438 words free in semispace
+After:  6687992 words free in semispace
+> bta-run
+effect analysis: fixpointing done
+bta-solve
+bta-solve done
+Run time: 7.63 seconds; Elapsed time: 16.04 seconds
+#t
+> Before: 3850929 words free in semispace
+After:  6671480 words free in semispace
+> bta-run
+effect analysis: fixpointing done
+bta-solve
+bta-solve done
+Run time: 7.64 seconds; Elapsed time: 15.97 seconds
+#t
+> Before: 3834414 words free in semispace
+After:  6654968 words free in semispace
+> bta-run
+effect analysis: fixpointing done
+bta-solve
+bta-solve done
+Run time: 7.67 seconds; Elapsed time: 15.67 seconds
+#t
+> **********  maze  **********> 
+> Before: 3814359 words free in semispace
+After:  6638456 words free in semispace
+> bta-run
+effect analysis: fixpointing done
+bta-solve
+bta-solve done
+Run time: 9.19 seconds; Elapsed time: 18.54 seconds
+#t
+> Before: 3515165 words free in semispace
+After:  6594637 words free in semispace
+> bta-run
+effect analysis: fixpointing done
+bta-solve
+bta-solve done
+Run time: 9.18 seconds; Elapsed time: 18.79 seconds
+#t
+> Before: 3480620 words free in semispace
+After:  6574527 words free in semispace
+> bta-run
+effect analysis: fixpointing done
+bta-solve
+bta-solve done
+Run time: 9.14 seconds; Elapsed time: 18.71 seconds
+#t
+> Before: 3460452 words free in semispace
+After:  6554381 words free in semispace
+> bta-run
+effect analysis: fixpointing done
+bta-solve
+bta-solve done
+Run time: 9.13 seconds; Elapsed time: 18.48 seconds
+#t
+> Before: 3440364 words free in semispace
+After:  6534235 words free in semispace
+> bta-run
+effect analysis: fixpointing done
+bta-solve
+bta-solve done
+Run time: 9.15 seconds; Elapsed time: 18.62 seconds
+#t
+> **********  nbody  **********> 
+> Before: 3416672 words free in semispace
+After:  6514089 words free in semispace
+> bta-run
+effect analysis: fixpointing done
+bta-solve
+bta-solve done
+Run time: 23.21 seconds; Elapsed time: 30.20 seconds
+#t
+> Before: 5650614 words free in semispace
+After:  6302373 words free in semispace
+> bta-run
+effect analysis: fixpointing done
+bta-solve
+bta-solve done
+Run time: 23.11 seconds; Elapsed time: 23.92 seconds
+#t
+> Before: 5404687 words free in semispace
+After:  6299807 words free in semispace
+> bta-run
+effect analysis: fixpointing done
+bta-solve
+bta-solve done
+Run time: 23.17 seconds; Elapsed time: 24.44 seconds
+#t
+> Before: 5399246 words free in semispace
+After:  6297241 words free in semispace
+> bta-run
+effect analysis: fixpointing done
+bta-solve
+bta-solve done
+Run time: 23.14 seconds; Elapsed time: 24.10 seconds
+#t
+> Before: 5394263 words free in semispace
+After:  6294675 words free in semispace
+> bta-run
+effect analysis: fixpointing done
+bta-solve
+bta-solve done
+Run time: 23.13 seconds; Elapsed time: 23.62 seconds
+#t
+> **********  nucleic-2  **********> 
+> Before: 5385708 words free in semispace
+After:  6292109 words free in semispace
+> bta-run
+unknown var: char-upcase considered TOP
+bta-solve
+bta-solve done
+Run time: 27.36 seconds; Elapsed time: 27.74 seconds
+#t
+> Before: 3523116 words free in semispace
+After:  6210336 words free in semispace
+> bta-run
+unknown var: char-upcase considered TOP
+bta-solve
+bta-solve done
+Run time: 27.44 seconds; Elapsed time: 27.86 seconds
+#t
+> Before: 3361187 words free in semispace
+After:  6210102 words free in semispace
+> bta-run
+unknown var: char-upcase considered TOP
+bta-solve
+bta-solve done
+Run time: 27.43 seconds; Elapsed time: 28.14 seconds
+#t
+> Before: 3360759 words free in semispace
+After:  6209868 words free in semispace
+> bta-run
+unknown var: char-upcase considered TOP
+bta-solve
+bta-solve done
+Run time: 27.50 seconds; Elapsed time: 29.59 seconds
+#t
+> Before: 3360242 words free in semispace
+After:  6209634 words free in semispace
+> bta-run
+unknown var: char-upcase considered TOP
+bta-solve
+bta-solve done
+Run time: 27.42 seconds; Elapsed time: 28.36 seconds
+#t
+> **********  splay  **********> 
+> Before: 3356257 words free in semispace
+After:  6209400 words free in semispace
+> bta-run
+effect analysis: fixpointing done
+bta-solve
+bta-solve done
+Run time: 14.21 seconds; Elapsed time: 16.04 seconds
+#t
+> Before: 937169 words free in semispace
+After:  6442646 words free in semispace
+> bta-run
+effect analysis: fixpointing done
+bta-solve
+bta-solve done
+Run time: 14.15 seconds; Elapsed time: 14.98 seconds
+#t
+> Before: 1201784 words free in semispace
+After:  6415960 words free in semispace
+> bta-run
+effect analysis: fixpointing done
+bta-solve
+bta-solve done
+Run time: 14.19 seconds; Elapsed time: 15.59 seconds
+#t
+> Before: 1175095 words free in semispace
+After:  6389010 words free in semispace
+> bta-run
+effect analysis: fixpointing done
+bta-solve
+bta-solve done
+Run time: 14.10 seconds; Elapsed time: 14.37 seconds
+#t
+> Before: 1148145 words free in semispace
+After:  6362060 words free in semispace
+> bta-run
+effect analysis: fixpointing done
+bta-solve
+bta-solve done
+Run time: 14.12 seconds; Elapsed time: 14.76 seconds
+#t
+> 

@@ -1,0 +1,15 @@
+(define (hello x)
+  (define f (lambda-without-memoization (y)
+    (+ x y)))
+  (f 42))
+(define-syntax define-something
+  (syntax-rules ()
+    ((define-reader (f g x ...) body ...)
+     (begin
+       (define (f x ...)
+	 (lambda (state) body ...))
+       (define (g x ...)
+	 (lambda (state) body ...))))))
+(define-something (g h a b c) (list c b a))
+(define-something (k l) '())
+(load "examples/triv.scm")

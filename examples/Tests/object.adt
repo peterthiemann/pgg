@@ -1,0 +1,5 @@
+(defconstr (object set get add))
+
+(defprim-opaque (make-cell x) (list x))
+(defprim-opaque (cell-ref cell) (car cell))
+(defprim-opaque (cell-set! cell x) (set-car! cell x))

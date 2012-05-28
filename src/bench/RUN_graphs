@@ -1,0 +1,1 @@
+,time (begin (cogen-driver '("examples/Benchmark/graphs.scm") '(go 1)) #t)

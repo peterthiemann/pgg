@@ -1,0 +1,87 @@
+- admit static memoization
++ implement static mutable vectors:
+x cogen-abssyn.scm:(define (annIsRef? e)
+x cogen-abssyn.scm:     ((annIsRef? e)
+x cogen-abssyn.scm:     ((annIsRef? e)
+x cogen-abssyn.scm:     ((annIsRef? e)
+x cogen-effect.scm:	   ((annIsRef? e)
+x cogen-effect.scm:       ((annIsRef? e)
+x cogen-eq-flow.scm:       ((annIsRef? e)
+x cogen-eq-flow.scm:       ((annIsRef? e)
+x cogen-eq-flow.scm:       ((annIsRef? e)
+x cogen-eq-flow.scm:	 ((annIsRef? e)
+x cogen-eq-flow.scm:       ((annIsRef? e)
+x cogen-oca.scm:     ((annIsRef? e)
+cogen-reach.scm:	   ((annIsRef? e)
+cogen-reach.scm:       ((annIsRef? e)
+cogen-reach.scm:     ((annIsRef? e)
+cogen-reach.scm:     ((annIsRef? e)
+cogen-reach.scm:     ((annIsRef? e)
+cogen-reach.scm:     ((annIsRef? e)
+x cogen-skeleton.scm:     ((annIsRef? e)
+cogen-terminate.scm:     ((annIsRef? e)
+cogen-terminate.scm:     ((annIsRef? e)
+x pgg-packages.scm:	  annIsRef?
+x cogen-library.scm
+x cogen-direct-anf.scm
+x cogen-construct-genext.scm
+
++ insert memoization points more cleverly: only the outermost lam-D or if-D
++ implement coarity raising
+- extend the top-level such that arbitrary Scheme programs (including
+  non-functional definitions) are allowed
++ implement BACKQUOTE, UNQUOTE, UNQUOTE-SPLICING
++ use the proposed macro mechanism of R4RS to implement non-primitive forms
+- automatically insert representation coercions for (partially) static
+  top-level arguments (from the standard representation to the memoized one)
+- revise symbol handling to pairs of (symbol, version number)
+- change the way static skeletons are represented: include information
+  on sharing of dynamic values by replacing them in a consistent way
+- change the way static and dynamic parts are projected: process only one
+  value/btime pair at once  
++ analyze which lambdas and ctors are really memoized
++ incorporate the residual program in the goal function
++ make a macro out of the (_ i ...) functions
++ put type annotations to work: enforce types of primitives in bta-eq-flow
+- type annotation for arity of operators
++ inspect the lambda lifter (dependency analysis?)
+- insert LET only if the variable appears more than once in the body
++ reconsider LET insertion strategy (constructor arguments!)
+- how many memoization points are really necessary?
+  you may want to read Malmkjaer's PEPM'93 paper
++ support for EVAL
++ complete the above (preprocessor, bta, skeleton)
++ check whether it still performs continuation-based reduction :-)
++ really generate LAMBDA_MEMO and friends
++ control memoization
++ handle (begin ...)
++ handle nested (define ...)
+- specialize project-static, project-dynamic, and friends
++ use delay/force in project-* functions
++ write the library functions in direct style using shift/reset to
+  achieve continuation-based reduction
++ printout mechanism for bt analyzed program?
++ use introspection/reflective facilities to obtain the values of the
+  free variables
+- support variadic procedures (by considering argument lists as a
+  special partially static datatype)
+- the code generating functions return two results, the generated code
+  and a synthesized attribute which indicates the "seriousness" of the
+  code. The idea is that functions with non-serious body are unfolded
+  on the fly. 
+- post unfolding: keep track of # calls in the memo table by storing
+  an indirection to the call in the residual program. After generation
+  of the residual program we traverse the memo table once, performing
+  the unfoldings.
+- allow user control over caching. 
+- implement more a efficient caching mechanism.
+- implement parameterized abstract syntax: first define some macros,
+  then define ast accessors and constructors using them. How about
+  using some record facility?
++ add record support
+- replace the symtab by environments (cogen-env)
+- let the spec transform the residual program to CPS in order to
+  memoize partially static values (alternative: use call-with-values)
+- handle load-time evaluations properly. define load+spec function?
++ type of a top-level value might be a poly, does not seem to be
+  propagated to application site

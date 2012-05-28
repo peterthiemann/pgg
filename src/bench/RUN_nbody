@@ -1,0 +1,1 @@
+,time (begin (cogen-driver '("examples/Benchmark/nbody.scm") '(go 1 1 1)) #t)

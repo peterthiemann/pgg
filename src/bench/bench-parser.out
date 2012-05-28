@@ -1,0 +1,70 @@
+Welcome to Scheme 48 0.39 (made by sperber on Fri Feb 10 10:18:03 MET 1995).
+Copyright (c) 1993, 1994 by Richard Kelsey and Jonathan Rees.
+Please report bugs to scheme-48-bugs@martigny.ai.mit.edu.
+Type ,? (comma question-mark) for help.
+> Load structure big-scheme (y/n)? [big-scheme
+[formats
+[extended-ports
+[defrecord
+/afs/informatik.uni-tuebingen.de/@sys/pu/scheme48-0.39/lib/scheme48/big/defrecord.scm ]
+/afs/informatik.uni-tuebingen.de/@sys/pu/scheme48-0.39/lib/scheme48/big/more-port.scm ]
+/afs/informatik.uni-tuebingen.de/@sys/pu/scheme48-0.39/lib/scheme48/big/format.scm ]
+[queues
+/afs/informatik.uni-tuebingen.de/@sys/pu/scheme48-0.39/lib/scheme48/big/queue.scm 
+Analyzing... 
+Calls will be compiled in line: (really-make-queue queue-tail set-queue-tail! queue-head set-queue-head! queue-uid)
+]
+[pp
+/afs/informatik.uni-tuebingen.de/@sys/pu/scheme48-0.39/lib/scheme48/big/pp.scm ]
+[bigbit
+/afs/informatik.uni-tuebingen.de/@sys/pu/scheme48-0.39/lib/scheme48/big/bigbit.scm ]
+[destructuring
+/afs/informatik.uni-tuebingen.de/@sys/pu/scheme48-0.39/lib/scheme48/big/destructure.scm ]
+[receiving
+/afs/informatik.uni-tuebingen.de/@sys/pu/scheme48-0.39/lib/scheme48/big/receive.scm ]
+/afs/informatik.uni-tuebingen.de/@sys/pu/scheme48-0.39/lib/scheme48/big/big-util.scm ]
+> cogen-load.scm 
+loading compiler generator
+auxiliary.scm 
+cogen-abssyn.scm 
+cogen-scheme.scm 
+cogen-oca.scm 
+cogen-skeleton.scm 
+Undefined: (make-conditional-arm)
+cogen-bta.scm 
+cogen-ctors.scm 
+cogen-library.scm 
+shift-reset.scm 
+cogen-direct.scm 
+cogen-driver.scm 
+
+> > > > > examples/direct-lr-support.scm 
+> ../lr-essence/examples/grammars.scm 
+> > > > > ----------------------------------------------------------------------> 
+> PGG (parsers) :> 
+> > !!!preprocessing> 
+> (*bta-user-memoization* #f)
+Error: exception
+       (vector-ref '(#{Procedure 7551 annmakecall} 1) 1)
+1> (preprocessing time x 1)1> 1> !!!generating compiler1> 
+1> (*bta-user-memoization* #f)
+Error: exception
+       (vector-ref '(#{Procedure 7551 annmakecall} 1) 1)
+2> 
+Error: undefined variable
+       ppp
+       (package user)
+3> 
+Error: undefined variable
+       $goal
+       (package user)
+4> (compiler generation time x 1)4> 4> !!!compiling4> 
+4> 
+Error: undefined variable
+       $goal
+       (package user)
+5> 5> 
+Error: undefined variable
+       level1
+       (package user)
+6> (compilation time x 1)6> 6> 6> 

@@ -1,0 +1,25 @@
+#! /bin/sh
+
+repetitions=1
+
+for bench in boyer dynamic graphs lattice matrix maze nbody nucleic-2 splay
+do
+
+echo '********* ' $bench ' **********'
+
+{
+
+i=0
+
+while test $i -lt $repetitions 
+do
+echo ,collect
+cat bench/RUN_$bench
+i=$(($i + 1))
+done
+
+echo ,exit
+
+} | pgg.sh
+
+done

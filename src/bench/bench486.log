@@ -1,0 +1,131 @@
+Welcome to Scheme 48 0.36 (Similix 5.1).
+Copyright (c) 1993, 1994 by Richard Kelsey and Jonathan Rees.
+Please report bugs to scheme-48-bugs@martigny.ai.mit.edu.
+Type ,? (comma question-mark) for help.
+> > cogen-load.scm 
+loading compiler generator
+auxiliary.scm ..................................
+cogen-abssyn.scm .............................................................................................................
+cogen-scheme.scm .................................
+cogen-oca.scm ........
+cogen-skeleton.scm ...
+Undefined: (make-conditional-arm)
+cogen-bta.scm ......................................
+cogen-ctors.scm ..
+cogen-library.scm .......
+shift-reset.scm .....
+cogen-direct.scm ...................
+cogen-driver.scm .
+
+> > > > > Similix (app) :> 
+> > !!!preprocessing> 
+> front-end _simtmp0.scm ......................................................................................................................................................
+flow bt sp eod oc rl 
+'done
+> front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+front-end flow bt sp eod oc rl 
+Run time: 56.97 seconds
+'done
+> !!!generating compiler> 
+> generating compiler (timing)
+_simtmp0.scm ...................................................................................................................................................
+'()
+> 

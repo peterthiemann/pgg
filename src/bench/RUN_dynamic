@@ -1,0 +1,1 @@
+,time (begin (cogen-driver '("examples/Benchmark/dynamic.scm") '(doit 1)) #t)

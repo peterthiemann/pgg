@@ -1,0 +1,167 @@
+(define repetitions 100)
+(define ntimes
+  (lambda (thunk n)
+    (let loop ((i n))
+      (if (> i 0)
+	  (begin
+	    (thunk)
+	    (loop (- i 1)))))))
+
+,in cogen-globals (set! *bta-display-level* 0)		;quiet, please
+,open define-data
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(display "----------------------------------------------------------------------") (newline)
+(display "PGG (app) :") (newline)
+
+,collect
+,time (ntimes (lambda() (cogen-driver '("examples/app.scm") '(app 0 1)) #f) 1)
+(display (list "^^^ preprocessing time *" repetitions)) (newline)
+
+(display "!!!compiling") (newline)
+(define *residual-program* (cogen-driver '("examples/app.scm") '(app 0 1)))
+(load-program *residual-program*)
+,collect
+,time (ntimes (lambda () (start-memo 1 $goal '(0 1) (list '(a b c) 'YYY))) repetitions)
+(display (list "^^^ specialization time *" repetitions)) (newline)
+
+;;;
+
+
+
+,collect
+
+;;; second run 
+(display "----------------------------------------------------------------------") (newline)
+(display "PGG (ctors) :") (newline)
+
+,collect
+,time (ntimes (lambda() (cogen-driver '("examples/ctors.scm") '(main 0 1)) #f) 1)
+(display (list "^^^ preprocessing time *" repetitions)) (newline)
+
+(display "!!!compiling") (newline)
+(define *residual-program* (cogen-driver '("examples/ctors.scm") '(main 0 1)))
+(load-program *residual-program*)
+,collect
+,time (ntimes (lambda () (start-memo 1 $goal '(0 1) (list  '(a b c) 'YYY))) repetitions)
+(display (list "^^^ specialization time *" repetitions)) (newline)
+
+;;;
+
+
+
+,collect
+
+;;; third run
+(display "----------------------------------------------------------------------") (newline)
+(display "PGG (lambda) :") (newline)
+
+,collect
+,time (ntimes (lambda() (cogen-driver '("examples/lambda.scm") '(main 0 1)) #f) 1)
+(display (list "^^^ preprocessing *" repetitions)) (newline)
+
+(display "!!!compiling") (newline)
+(define *residual-program* (cogen-driver '("examples/lambda.scm") '(main 0 1)))
+(load-program *residual-program*)
+,collect
+,time (ntimes (lambda () (start-memo 1 $goal '(0 1) (list 42 'YYY))) repetitions)
+(display (list "^^^ specialization time *" repetitions)) (newline)
+
+;;;
+
+
+
+,collect
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(display "----------------------------------------------------------------------") (newline)
+(display "PGG (direct-lr) :") (newline)
+(set! repetitions 1)
+(define direct-lr-input-files '("examples/direct-lr-pgg.scm"))
+
+,collect
+,time (ntimes (lambda() (cogen-driver direct-lr-input-files '(direct-parse-main 0 0 1)) #f) repetitions)
+(display (list "^^^ preprocessing *" repetitions)) (newline)
+
+
+(load "examples/direct-lr-support.scm")
+(load "../lr-essence/examples/toy-grammars.scm")
+(display "!!!compiling") (newline)
+(define *residual-program* (cogen-driver direct-lr-input-files '(direct-parse-main 0 0 1)))
+(load-program *residual-program*)
+,collect
+,time (ntimes (lambda () (start-memo 1 $goal '(0 0 1) (list g10-attrib 1 'input))) repetitions)
+(display (list "^^^ specialization time *" repetitions)) (newline)
+
+;;;
+
+
+
+,collect
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(display "----------------------------------------------------------------------") (newline)
+(display "PGG (cps-lr) :") (newline)
+
+,collect
+,time (begin (cogen-driver '("examples/cps-lr.scm") '(do-parse 0 0 1)) #t)
+(display (list "^^^ preprocessing time * 1")) (newline)
+(define *residual-program* (cogen-driver '("examples/cps-lr.scm") '(do-parse 0 0 1)))
+(load-program *residual-program*)
+(load "examples/direct-lr-support.scm")
+(load "../lr-essence/examples/toy-grammars.scm")
+
+,collect
+,time (begin (start-memo 1 $goal '(0 0  1) (list g10-attrib 1 'input)) #t)
+(display (list "^^^ specialization time * 1")) (newline)
+
+;;;
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(display "----------------------------------------------------------------------") (newline)
+(display "PGG (cps-lr, 3 levels) :") (newline)
+
+,collect
+,time (begin (cogen-driver '("examples/cps-lr.scm") '(do-parse 1 1 2)) #t)
+(display (list "^^^ preprocessing time * 1")) (newline)
+(define *residual-program* (cogen-driver '("examples/cps-lr.scm") '(do-parse 1 1 2)))
+(load-program *residual-program*)
+
+,collect
+,time (begin (start-memo 2 $goal '(1 1 2) (list 'grammar 'k 'input)) #t)
+(display (list "^^^ generation time * 1")) (newline)
+(define level1 (start-memo 2 $goal '(1 1 2) (list 'grammar 'k 'input)))
+(load-program *residual-program*)
+
+(load "examples/direct-lr-support.scm")
+(load "../lr-essence/examples/toy-grammars.scm")
+,collect
+,time (begin (nextlevel level1 (list g10-attrib 1 'input)) #t)
+(display (list "^^^ specialization time 1 * 1")) (newline)
+
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(display "----------------------------------------------------------------------") (newline)
+(display "PGG (scheme1) :") (newline)
+
+,collect
+,time (begin (cogen-driver '("examples/scheme1-pgg.scm") '(s1-2int-skeleton 0 0 1)) #t)
+(display (list "^^^ preprocessing time * 1")) (newline)
+(define *residual-program* (cogen-driver '("examples/scheme1-pgg.scm") '(s1-2int-skeleton 0 0 1)))
+(load-program *residual-program*)
+
+(load "examples/scheme1-support.scm")
+(load "../../int/examples.scm")
+,collect
+,time (begin (start-memo 1 $goal '(0 0  1) (list ex5 '(f (aaa bbb ccc) ***) '***)) #t)
+(display (list "^^^ specialization time * 1")) (newline)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+,exit
